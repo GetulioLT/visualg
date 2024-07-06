@@ -1,25 +1,25 @@
 algoritmo "Nome do Programa"
-// DeclaraÁ„o de vari·veis
+// Declara√ß√£o de vari√°veis
 var
     // nota: armazena a nota individual de cada prova; s_notas: soma das notas de um aluno
     nota, s_notas : real
-    // media: mÈdia das notas de um aluno; s_medias: soma das mÈdias de todos os alunos; media_geral: mÈdia geral de todos os alunos
+    // media: m√©dia das notas de um aluno; s_medias: soma das m√©dias de todos os alunos; media_geral: m√©dia geral de todos os alunos
     media, s_medias, media_geral : real
-    // ma_media: armazena a maior mÈdia encontrada; me_media: armazena a menor mÈdia encontrada
+    // ma_media: armazena a maior m√©dia encontrada; me_media: armazena a menor m√©dia encontrada
     ma_media, me_media : real
     // i: contador para as notas; opcao: controle do loop principal; qnt: quantidade de alunos
     i, opcao, qnt : inteiro
 
-// InÌcio do programa
+// In√≠cio do programa
 inicio
-    // InicializaÁ„o de vari·veis
+    // Inicializa√ß√£o de vari√°veis
     s_medias <- 0
     ma_media <- 0
     me_media <- 10
     qnt <- 0
     opcao <- 1
 
-    // Loop principal: executa enquanto o usu·rio desejar continuar
+    // Loop principal: executa enquanto o usu√°rio desejar continuar
     enquanto opcao = 1 faca
         // Inicializa o contador de notas e a soma das notas para o aluno atual
         i <- 1
@@ -32,11 +32,11 @@ inicio
             i <- i + 1
         fimenquanto
 
-        // Calcula a mÈdia do aluno e acumula para o c·lculo da mÈdia geral
+        // Calcula a m√©dia do aluno e acumula para o c√°lculo da m√©dia geral
         media <- s_notas / 4
         s_medias <- s_medias + media
 
-        // Verifica se a mÈdia do aluno È a maior ou a menor atÈ o momento
+        // Verifica se a m√©dia do aluno √© a maior ou a menor at√© o momento
         se media > ma_media entao
             ma_media <- media
         fimse
@@ -44,20 +44,20 @@ inicio
             me_media <- media
         fimse
 
-        // Pergunta ao usu·rio se deseja continuar
-        escreva("Deseja continuar? (1 - Sim, 0 - N„o): ")
+        // Pergunta ao usu√°rio se deseja continuar
+        escreva("Deseja continuar? (1 - Sim, 0 - N√£o): ")
         leia(opcao)
 
         // Contabiliza mais um aluno processado
         qnt <- qnt + 1
     fimenquanto
 
-    // Calcula a mÈdia geral
+    // Calcula a m√©dia geral
     media_geral <- s_medias / qnt
 
-    // SaÌda de dados: exibe a maior mÈdia, a menor mÈdia e a mÈdia geral
-    escreval("Maior mÈdia: ", ma_media)
-    escreval("Menor mÈdia: ", me_media)
-    escreval("MÈdia Geral: ", media_geral)
+    // Sa√≠da de dados: exibe a maior m√©dia, a menor m√©dia e a m√©dia geral
+    escreval("Maior m√©dia: ", ma_media)
+    escreval("Menor m√©dia: ", me_media)
+    escreval("M√©dia Geral: ", media_geral)
 // Fim do algoritmo
 fimalgoritmo

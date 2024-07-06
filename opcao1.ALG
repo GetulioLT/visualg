@@ -1,41 +1,41 @@
 algoritmo "Nome do Programa"
-// DeclaraÁ„o de vari·veis
+// Declara√ß√£o de vari√°veis
 var
     // nota: armazena a nota individual de cada prova; s_notas: soma das notas de um aluno
     nota, s_notas : real
-    // media: mÈdia das notas de um aluno; s_medias: soma das mÈdias de todos os alunos; media_geral: mÈdia geral de todos os alunos
+    // media: m√©dia das notas de um aluno; s_medias: soma das m√©dias de todos os alunos; media_geral: m√©dia geral de todos os alunos
     media, s_medias, media_geral : real
-    // ma_media: armazena a maior mÈdia encontrada; me_media: armazena a menor mÈdia encontrada
+    // ma_media: armazena a maior m√©dia encontrada; me_media: armazena a menor m√©dia encontrada
     ma_media, me_media : real
-    // qnt: quantidade de alunos; i, j: contadores para os laÁos
+    // qnt: quantidade de alunos; i, j: contadores para os la√ßos
     qnt, i, j : inteiro
 
-// InÌcio do programa
+// In√≠cio do programa
 inicio
     // Entrada de dados
     escreva("Digite a quantidade de alunos: ")
     leia(qnt)
-    // InicializaÁ„o de vari·veis
+    // Inicializa√ß√£o de vari√°veis
     s_medias <- 0
     ma_media <- 0
     me_media <- 10
 
     // Processamento de dados
-    // LaÁo externo: percorre todos os alunos
+    // La√ßo externo: percorre todos os alunos
     para i de 1 ate qnt faca
-        // Inicializa a soma das notas e a mÈdia para o aluno atual
+        // Inicializa a soma das notas e a m√©dia para o aluno atual
         s_notas <- 0
         media <- 0
-        // LaÁo interno: lÍ as notas das 4 provas de cada aluno
+        // La√ßo interno: l√™ as notas das 4 provas de cada aluno
         para j de 1 ate 4 faca
             escreva("Digite a nota do aluno ", i, " na prova ", j, ": ")
             leia(nota)
             s_notas <- s_notas + nota // Acumula a nota do aluno
         fimpara
-        // Calcula a mÈdia do aluno e acumula para o c·lculo da mÈdia geral
+        // Calcula a m√©dia do aluno e acumula para o c√°lculo da m√©dia geral
         media <- s_notas / 4
         s_medias <- s_medias + media
-        // Verifica se a mÈdia do aluno È a maior ou a menor atÈ o momento
+        // Verifica se a m√©dia do aluno √© a maior ou a menor at√© o momento
         se media > ma_media entao
             ma_media <- media
         fimse
@@ -44,12 +44,12 @@ inicio
         fimse
     fimpara
 
-    // C·lculo da mÈdia geral
+    // C√°lculo da m√©dia geral
     media_geral <- s_medias / qnt
 
-    // SaÌda de dados: exibe a maior mÈdia, a menor mÈdia e a mÈdia geral
-    escreval("A maior mÈdia È: ", ma_media)
-    escreval("A menor mÈdia È: ", me_media)
-    escreval("A mÈdia geral È: ", media_geral)
+    // Sa√≠da de dados: exibe a maior m√©dia, a menor m√©dia e a m√©dia geral
+    escreval("A maior m√©dia √©: ", ma_media)
+    escreval("A menor m√©dia √©: ", me_media)
+    escreval("A m√©dia geral √©: ", media_geral)
 // Fim do algoritmo
 fimalgoritmo
